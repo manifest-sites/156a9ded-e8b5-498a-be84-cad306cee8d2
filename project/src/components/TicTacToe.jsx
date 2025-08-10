@@ -63,7 +63,7 @@ function TicTacToe() {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gray-900 p-8">
       <div className="text-center space-y-8 w-full max-w-2xl">
-        <Title level={1} className="text-white mb-8 text-5xl">
+        <Title level={1} style={{ color: 'white' }} className="mb-8 text-5xl">
           Tic Tac Toe
         </Title>
         
