@@ -61,24 +61,24 @@ function TicTacToe() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-blue-100 p-8">
-      <Card className="text-center space-y-6 shadow-xl max-w-md mx-auto">
-        <Title level={1} className="text-gradient bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-2">
+    <div className="min-h-screen w-full flex items-center justify-center bg-gray-900 p-8">
+      <div className="text-center space-y-8 w-full max-w-2xl">
+        <Title level={1} className="text-white mb-8 text-5xl">
           Tic Tac Toe
         </Title>
         
-        <div className="text-2xl mb-4">
-          <Text strong className={winner ? 'text-green-600' : 'text-blue-600'}>
+        <div className="text-3xl mb-8">
+          <Text strong className={winner ? 'text-green-400' : 'text-blue-400'}>
             {getStatusText()}
           </Text>
         </div>
 
-        <div className="grid grid-cols-3 gap-2 max-w-xs mx-auto mb-6">
+        <div className="grid grid-cols-3 gap-4 max-w-md mx-auto mb-8">
           {board.map((cell, index) => (
             <button
               key={index}
               onClick={() => handleClick(index)}
-              className="w-20 h-20 bg-white border-2 border-gray-300 rounded-lg text-3xl font-bold hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center shadow-sm"
+              className="w-24 h-24 md:w-32 md:h-32 bg-gray-800 border-2 border-gray-600 rounded-lg text-4xl md:text-5xl font-bold hover:bg-gray-700 transition-colors duration-200 flex items-center justify-center shadow-lg"
               disabled={gameOver || cell !== null}
             >
               {cell}
@@ -86,15 +86,15 @@ function TicTacToe() {
           ))}
         </div>
 
-        <div className="flex justify-center space-x-4 text-lg mb-4">
-          <div className="flex items-center space-x-2">
-            <span className="text-2xl">✋</span>
-            <Text>Hand</Text>
+        <div className="flex justify-center space-x-6 text-xl mb-8">
+          <div className="flex items-center space-x-3">
+            <span className="text-3xl">✋</span>
+            <Text className="text-white">Hand</Text>
           </div>
-          <Text className="text-gray-400">vs</Text>
-          <div className="flex items-center space-x-2">
-            <span className="text-2xl">🦶</span>
-            <Text>Toe</Text>
+          <Text className="text-gray-400 text-2xl">vs</Text>
+          <div className="flex items-center space-x-3">
+            <span className="text-3xl">🦶</span>
+            <Text className="text-white">Toe</Text>
           </div>
         </div>
 
@@ -102,11 +102,11 @@ function TicTacToe() {
           type="primary" 
           size="large" 
           onClick={resetGame}
-          className="bg-gradient-to-r from-green-500 to-blue-500 border-none"
+          className="bg-gradient-to-r from-green-500 to-blue-500 border-none text-xl px-8 py-4 h-auto"
         >
           New Game
         </Button>
-      </Card>
+      </div>
     </div>
   )
 }
