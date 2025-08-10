@@ -4,6 +4,7 @@ import Monetization from './components/monetization/Monetization'
 import HelloWorld from './components/HelloWorld'
 import About from './components/About'
 import Navigation from './components/Navigation'
+import TicTacToe from './components/TicTacToe'
 import { getRouterBasename } from './utils/routerUtils'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HelloWorld />} />
           <Route path="/about" element={<About />} />
+          <Route path="/tic-tac-toe" element={<TicTacToe />} />
         </Routes>
       </Router>
     </Monetization>

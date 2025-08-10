@@ -42,6 +42,16 @@ function Navigation() {
             >
               About
             </Link>
+            <Link 
+              to="/tic-tac-toe" 
+              className={`py-4 px-6 border-b-2 transition-colors ${
+                location.pathname === '/tic-tac-toe' 
+                  ? 'border-white text-white' 
+                  : 'border-transparent text-gray-300 hover:text-white hover:border-gray-300'
+              }`}
+            >
+              Tic Tac Toe ✋🦶
+            </Link>
           </div>
           
           <div className="py-4">
